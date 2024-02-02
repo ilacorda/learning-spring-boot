@@ -7,12 +7,14 @@ import com.frankmoley.lil.learningspring.data.entity.Room;
 import com.frankmoley.lil.learningspring.data.repository.GuestRepository;
 import com.frankmoley.lil.learningspring.data.repository.ReservationRepository;
 import com.frankmoley.lil.learningspring.data.repository.RoomRepository;
+import io.micrometer.observation.annotation.Observed;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.*;
 
 @Service
+@Observed
 public class ReservationService {
     private final RoomRepository roomRepository;
     private final GuestRepository guestRepository;
